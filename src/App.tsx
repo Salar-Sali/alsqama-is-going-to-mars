@@ -1,5 +1,12 @@
+import AppHeader from "./support/header/app-header";
+import "./App.css";
+
 function App() {
-  return <div>هاي</div>;
+  return (
+    <div style={{ backgroundColor: "red" }}>
+      <AppHeader />
+    </div>
+  );
 }
 
 export default App;
