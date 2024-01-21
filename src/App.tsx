@@ -7,6 +7,9 @@ function App() {
     <BrowserRouter>
       <AppHeader />
       <div style={{ height: "500px" }}>body</div>
+      <div style={{ height: "500px" }}>body</div>
+      <div style={{ height: "500px" }}>body</div>
+      <div style={{ height: "500px" }}>body</div>
     </BrowserRouter>
   );
 }
