@@ -7,30 +7,39 @@ const pages = ["Products", "Pricing", "Blog"];
 export const StyledAppBar = styled(AppBar)`
   position: sticky;
   display: flex;
-  align-items: center;
+  flex-direction: row-reverse !important;
   justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
   background-color: #5a409b !important;
 `;
 
 export const LogoAndServices = styled.div`
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 16px;
-  background-color: blue;
+  width: fit-content;
 `;
 
 export const StyledServices = styled.div`
   display: flex;
   gap: 8px;
-  /* background-color: red; */
+`;
+
+export const TranslationAndAuth = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: fit-content;
 `;
 
 function AppHeader() {
   return (
     <StyledAppBar>
-      {/* right side */}
+      {/* left side */}
       <LogoAndServices>
-        <h2>txt</h2>
+        <h2>حجزك</h2>
         <StyledServices>
           {pages.map((page) => (
             <Link
@@ -43,9 +52,10 @@ function AppHeader() {
           ))}
         </StyledServices>
       </LogoAndServices>
-      {/* left side */}
-      <div>test</div>
+      {/* right side */}
+      <TranslationAndAuth>test</TranslationAndAuth>
     </StyledAppBar>
   );
 }
+
 export default AppHeader;
