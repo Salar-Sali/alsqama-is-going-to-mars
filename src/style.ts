@@ -5,4 +5,6 @@ export const HomePageWrapper = styled.div<{ appHeaderHeight: number }>`
   margin-top: ${(style: { appHeaderHeight: number }) =>
     style.appHeaderHeight}px;
   background-color: #f2f4fa;
+  padding-left: 64px;
+  padding-right: 64px;
 `;
