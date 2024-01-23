@@ -5,7 +5,7 @@ export const StyledAppBar = styled(AppBar)<{ appHeaderHeight: number }>`
   position: fixed;
   top: 0px;
   display: flex;
-  flex-direction: row-reverse !important;
+  flex-direction: row !important;
   justify-content: space-between;
   background-color: #5a409b !important;
   height: ${(style: { appHeaderHeight: number }) => style.appHeaderHeight}px;
@@ -21,7 +21,7 @@ export const StyledAppBar = styled(AppBar)<{ appHeaderHeight: number }>`
 
 export const LogoAndServices = styled.div`
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
   gap: 16px;
   width: fit-content;
