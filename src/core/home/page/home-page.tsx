@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import styled from "styled-components";
+import Image from "../../../../public/assets/mainPage.jpeg";
 
 export const HomePageWrapper = styled.div`
   height: 100%;
@@ -21,7 +22,7 @@ export const SloganAndBookingButton = styled.div`
   }
 `;
 export const HomePageImageContainer = styled.div`
-  background-color: blue;
+  /* background-color: blue; */
   width: 45%;
   @media (max-width: 768px) {
     width: 80%;
@@ -40,6 +41,11 @@ export const BookNowButton = styled(Button)`
   color: black !important;
 `;
 
+export const StyledMainPageImage = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
 const HomePage = () => {
   return (
     <HomePageWrapper>
@@ -56,7 +62,9 @@ const HomePage = () => {
         </div>
         <BookNowButton>أحجز الآن</BookNowButton>
       </SloganAndBookingButton>
-      <HomePageImageContainer>image</HomePageImageContainer>
+      <HomePageImageContainer>
+        <StyledMainPageImage src={Image} alt="main image" />
+      </HomePageImageContainer>
     </HomePageWrapper>
   );
 };
