@@ -7,10 +7,16 @@ export const StyledAppBar = styled(AppBar)<{ appHeaderHeight: number }>`
   display: flex;
   flex-direction: row-reverse !important;
   justify-content: space-between;
-  padding-left: 64px;
-  padding-right: 64px;
   background-color: #5a409b !important;
   height: ${(style: { appHeaderHeight: number }) => style.appHeaderHeight}px;
+  padding-left: 7%;
+  padding-right: 7%;
+
+  /* Small screens */
+  @media (max-width: 480px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 `;
 
 export const LogoAndServices = styled.div`

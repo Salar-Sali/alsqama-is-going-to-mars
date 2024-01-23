@@ -5,6 +5,12 @@ export const HomePageWrapper = styled.div<{ appHeaderHeight: number }>`
   margin-top: ${(style: { appHeaderHeight: number }) =>
     style.appHeaderHeight}px;
   background-color: #f2f4fa;
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-left: 7%;
+  padding-right: 7%;
+
+  /* Small screens */
+  @media (max-width: 480px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 `;
