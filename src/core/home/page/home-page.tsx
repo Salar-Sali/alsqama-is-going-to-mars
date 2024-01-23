@@ -35,7 +35,7 @@ export const HomePageImageContainer = styled.div`
 export const SloganTitle = styled.h2``;
 
 export const BookNowButton = styled(Button)`
-  padding: 16px;
+  padding: 8px 24px !important;
   background-color: #f2c900 !important;
   color: black !important;
 `;
