@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import styled from "styled-components";
-import Image from "../../../../public/assets/mainPage.jpeg";
+import Image from "../../../../public/assets/2.jpg";
 
 export const HomePageWrapper = styled.div`
   height: 100%;
@@ -9,6 +9,8 @@ export const HomePageWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 0px;
 `;
 
 export const SloganAndBookingButton = styled.div`
@@ -21,8 +23,14 @@ export const SloganAndBookingButton = styled.div`
     width: 100%;
   }
 `;
+
+export const SloganAndDescription = styled.div`
+  padding-bottom: 16px;
+`;
 export const HomePageImageContainer = styled.div`
-  /* background-color: blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 45%;
   @media (max-width: 768px) {
     width: 80%;
@@ -33,33 +41,48 @@ export const HomePageImageContainer = styled.div`
   }
 `;
 
-export const SloganTitle = styled.h2``;
+export const SloganTitle = styled.h2`
+  font-size: 48px;
+  @media (max-width: 480px) {
+    font-size: 32px;
+  }
+`;
+
+export const HomePageDescription = styled.p`
+  font-size: larger;
+  line-height: 32px;
+`;
 
 export const BookNowButton = styled(Button)`
-  padding: 8px 24px !important;
+  padding: 8px 32px !important;
   background-color: #f2c900 !important;
   color: black !important;
+  font-weight: bold;
+  font-size: 20px !important;
 `;
 
 export const StyledMainPageImage = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
+
+  @media (max-width: 480px) {
+    width: 95%;
+    height: 95%;
+  }
 `;
 
 const HomePage = () => {
   return (
     <HomePageWrapper>
       <SloganAndBookingButton>
-        <div>
+        <SloganAndDescription>
           <SloganTitle>استمتع بتجربة حجز فريدة ومريحة</SloganTitle>
-          <p>
-            مرحبًا بك في موقعنا الرائع! اكتشف عالمًا جديدًا من الراحة والفخامة
-            مع خدمتنا المميزة في حجز الفنادق والصالات. سواء كنت تبحث عن إقامة
-            هادئة أو تخطيط لمناسبة خاصة، نحن هنا لنجعل كل لحظة لديك لا تُنسى.
-            استمتع بأفضل العروض والأماكن الرائعة، وابدأ رحلتك في تحقيق الأحلام.
-            احجز الآن وانعم بتجربة حجز لا مثيل لها!
-          </p>
-        </div>
+          <HomePageDescription>
+            مرحبًا بك في موقعنا! اكتشف عالمًا من الراحة والفخامة مع حجز الفنادق
+            والصالات. سواء لإقامة هادئة أو مناسبة خاصة، نحن هنا لجعل لحظاتك لا
+            تُنسى. استمتع بأفضل العروض وابدأ رحلتك الفندقية الآن!{" "}
+          </HomePageDescription>
+        </SloganAndDescription>
         <BookNowButton>أحجز الآن</BookNowButton>
       </SloganAndBookingButton>
       <HomePageImageContainer>
