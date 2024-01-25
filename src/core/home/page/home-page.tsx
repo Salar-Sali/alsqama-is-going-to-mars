@@ -1,6 +1,9 @@
 import { Button } from "@mui/material";
 import styled from "styled-components";
-import Image from "../../../../public/assets/2.jpg";
+import Image1 from "../../../../public/assets/1.jpg";
+import Image2 from "../../../../public/assets/2.jpg";
+import Image3 from "../../../../public/assets/3.jpg";
+import Carousel from "react-material-ui-carousel/dist/components/Carousel";
 
 export const HomePageWrapper = styled.div`
   height: 100%;
@@ -14,7 +17,6 @@ export const HomePageWrapper = styled.div`
 `;
 
 export const SloganAndBookingButton = styled.div`
-  /* background-color: red; */
   width: 45%;
   @media (max-width: 768px) {
     width: 80%;
@@ -26,19 +28,6 @@ export const SloganAndBookingButton = styled.div`
 
 export const SloganAndDescription = styled.div`
   padding-bottom: 16px;
-`;
-export const HomePageImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45%;
-  @media (max-width: 768px) {
-    width: 80%;
-  }
-
-  @media (max-width: 480px) {
-    width: 100%;
-  }
 `;
 
 export const SloganTitle = styled.h2`
@@ -62,12 +51,29 @@ export const BookNowButton = styled(Button)`
 `;
 
 export const StyledMainPageImage = styled.img`
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 
-  @media (max-width: 480px) {
-    width: 95%;
-    height: 95%;
+export const StyledCarousel = styled(Carousel)`
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+`;
+
+export const HomePageImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 65%;
+  background-color: red;
+  border-radius: 16px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 80%;
   }
 `;
 
@@ -86,7 +92,13 @@ const HomePage = () => {
         <BookNowButton>أحجز الآن</BookNowButton>
       </SloganAndBookingButton>
       <HomePageImageContainer>
-        <StyledMainPageImage src={Image} alt="main image" />
+        <StyledCarousel>
+          <StyledMainPageImage src={Image1} alt="main image" />
+          <StyledMainPageImage src={Image2} alt="main image" />
+          <StyledMainPageImage src={Image3} alt="main image" />
+          <StyledMainPageImage src={Image1} alt="main image" />
+          <StyledMainPageImage src={Image2} alt="main image" />
+        </StyledCarousel>
       </HomePageImageContainer>
     </HomePageWrapper>
   );
