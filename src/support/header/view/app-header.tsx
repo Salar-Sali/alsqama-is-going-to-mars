@@ -7,6 +7,7 @@ import {
   TranslationAndAuth,
 } from "./style";
 import { AppHeaderVM } from "../vm/app-header-vm";
+import AppNavbarLocalizationButton from "./localization-button/app-navbar-localization-button";
 
 function AppHeader() {
   const vm = new AppHeaderVM().useVM();
@@ -27,7 +28,9 @@ function AppHeader() {
           ))}
         </StyledServices>
       </LogoAndServices>
-      <TranslationAndAuth>test</TranslationAndAuth>
+      <TranslationAndAuth>
+        <AppNavbarLocalizationButton />
+      </TranslationAndAuth>
     </StyledAppBar>
   );
 }
