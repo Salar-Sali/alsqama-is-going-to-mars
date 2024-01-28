@@ -13,6 +13,7 @@ const langKey = {
     hotels: "navbar.hotels",
     chalets: "navbar.chalets",
     resorts: "navbar.resorts",
+    createAccount: "navbar.createAccount",
   },
 };
 

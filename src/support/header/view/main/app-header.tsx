@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
-import { appHeaderHeight } from "../../../bootstrap/helper/global-helper";
+import { appHeaderHeight } from "../../../../bootstrap/helper/global-helper";
 import {
   StyledAppBar,
   LogoAndServices,
   StyledServices,
   TranslationAndAuth,
 } from "./style";
-import { AppHeaderVM } from "../vm/app-header-vm";
-import AppNavbarLocalizationButton from "./localization-button/app-navbar-localization-button";
+import { AppHeaderVM } from "../../vm/app-header-vm";
+import AppNavbarLocalizationButton from "../localization-button/app-navbar-localization-button";
+import SignUpButton from "../sign-up-button/sign-up-button";
 
 function AppHeader() {
   const vm = new AppHeaderVM().useVM();
@@ -30,6 +31,7 @@ function AppHeader() {
       </LogoAndServices>
       <TranslationAndAuth>
         <AppNavbarLocalizationButton />
+        <SignUpButton />
       </TranslationAndAuth>
     </StyledAppBar>
   );

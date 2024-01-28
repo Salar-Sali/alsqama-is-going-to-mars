@@ -7,9 +7,10 @@ const ru: typeof langKey = {
     ar: "AR",
   },
   navbar: {
-    hotels: "отели",
-    chalets: "шале",
-    resorts: "курорты",
+    hotels: "Отели",
+    chalets: "Шале",
+    resorts: "Курорты",
+    createAccount: "Создать аккаунт",
   },
 };
 

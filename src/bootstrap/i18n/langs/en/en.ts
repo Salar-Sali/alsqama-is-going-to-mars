@@ -10,6 +10,7 @@ const en: typeof langKey = {
     hotels: "Hotels",
     chalets: "Chalets",
     resorts: "Resorts",
+    createAccount: "Create account",
   },
 };
 
