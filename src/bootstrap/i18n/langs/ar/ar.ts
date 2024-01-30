@@ -5,12 +5,20 @@ const ar: typeof langKey = {
     en: "EN",
     ar: "AR",
     ru: "RU",
+    createAccount: "إنشاء حساب",
+    login: " تسجيل الدخول ",
   },
   navbar: {
     hotels: "فنادق",
     chalets: "شاليهات",
     resorts: "منتجعات",
-    createAccount: "إنشاء حساب",
+  },
+  mainPage: {
+    createNewAccount: "إنشاء حساب جديد",
+    username: "اسم المستخدم",
+    email: "البريد الإلكتروني",
+    password: "كلمة المرور",
+    haveAnAccount: "هل لديك حساب؟ ",
   },
 };
 

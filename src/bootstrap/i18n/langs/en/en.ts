@@ -5,12 +5,20 @@ const en: typeof langKey = {
     ru: "RU",
     en: "EN",
     ar: "AR",
+    createAccount: "Create account",
+    login: "Login",
   },
   navbar: {
     hotels: "Hotels",
     chalets: "Chalets",
     resorts: "Resorts",
-    createAccount: "Create account",
+  },
+  mainPage: {
+    createNewAccount: "Create new account",
+    username: "Username",
+    email: "Email",
+    password: "Password",
+    haveAnAccount: "Already have an account?",
   },
 };
 

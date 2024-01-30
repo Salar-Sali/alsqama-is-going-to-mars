@@ -43,11 +43,13 @@ export const HomePageDescription = styled.p`
 `;
 
 export const BookNowButton = styled(Button)`
-  padding: 8px 32px !important;
-  background-color: #f2c900 !important;
-  color: black !important;
-  font-weight: bold;
-  font-size: 20px !important;
+  && {
+    padding: 8px 32px;
+    background-color: #f2c900;
+    color: black;
+    font-weight: normal;
+    font-size: 20px;
+  }
 `;
 
 export const StyledMainPageImage = styled.img`

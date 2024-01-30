@@ -10,7 +10,7 @@ const SignUpButton = () => {
   return (
     <>
       <StyledCreateAccountButton onClick={() => setModalIsOpen(true)}>
-        {t(langKey.navbar.createAccount)}
+        {t(langKey.global.createAccount)}
       </StyledCreateAccountButton>
       <SignUpModal isOpen={modalIsOpen} onClose={() => setModalIsOpen(false)} />
     </>

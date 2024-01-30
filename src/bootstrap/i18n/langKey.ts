@@ -8,12 +8,20 @@ const langKey = {
     ru: "global.ru",
     en: "global.en",
     ar: "global.ar",
+    createAccount: "global.createAccount",
+    login: "global.login",
   },
   navbar: {
     hotels: "navbar.hotels",
     chalets: "navbar.chalets",
     resorts: "navbar.resorts",
-    createAccount: "navbar.createAccount",
+  },
+  mainPage: {
+    createNewAccount: "mainPage.createNewAccount",
+    username: "mainPage.username",
+    email: "mainPage.email",
+    password: "mainPage.password",
+    haveAnAccount: "mainPage.haveAnAccount",
   },
 };
 
