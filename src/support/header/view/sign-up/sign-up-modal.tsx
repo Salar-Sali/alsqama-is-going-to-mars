@@ -12,6 +12,7 @@ import {
   StyledCreateAccountButton,
   SignUpModalLogInButton,
 } from "./style";
+import { SignUpButtonVM } from "../../vm/sign-up/sign-up-button-vm";
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -25,9 +26,11 @@ const SignUpModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === LANGS.AR;
 
+  const vm = new SignUpButtonVM();
   const handleSignup = (e: FormEvent) => {
     e.preventDefault();
     console.log("sign up");
+    vm.handleOnClick();
   };
 
   return (
