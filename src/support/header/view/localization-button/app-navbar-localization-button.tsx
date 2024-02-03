@@ -8,7 +8,7 @@ import { StyledLocalizationButtonFormControl } from "./style";
 const AppNavbarLocalizationButton = () => {
   const { i18n } = useTranslation();
 
-  const [lang, setLang] = useState<LANGS>(LANGS.EN);
+  const [lang, setLang] = useState<LANGS>(i18n.language as LANGS);
 
   const handleSetLanguage = (language: LANGS) => {
     setLang(language);
