@@ -26,11 +26,10 @@ const SignUpModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === LANGS.AR;
 
-  const vm = new SignUpButtonVM();
+  const vm = new SignUpButtonVM().useVM();
   const handleSignup = (e: FormEvent) => {
     e.preventDefault();
-    console.log("sign up");
-    vm.handleOnClick();
+    vm.onClick();
   };
 
   return (
@@ -41,6 +40,8 @@ const SignUpModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       aria-describedby="modal-for-signup-and-login"
     >
       <StyledSignUpBox>
+        {vm.props.isLoading && <span>loading..</span>}
+        {vm.props.error && <span>error happened</span>}
         <StyledSignUpModalHeaderWrapper dir={isArabic ? "rtl" : "ltr"}>
           <Typography variant="h5" gutterBottom>
             {t(langKey.mainPage.createNewAccount)}
